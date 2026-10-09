@@ -1,27 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export',
-  reactStrictMode: true,
+  output: 'export', // این خط برای ساخت خروجی استاتیک حیاتی است
+  basePath: '/hadi-hadian-portfolio', // نام مخزن شما
+  assetPrefix: '/hadi-hadian-portfolio/', // نام مخزن شما با اسلش انتهایی
   images: {
     unoptimized: true, // GitHub Pages از بهینه‌سازی تصویر Next.js پشتیبانی نمی‌کند
   },
-  basePath: '/project',
-  assetPrefix: '/project/',
-  experimental: {
-    agentFeedback: true,
-  },
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  trailingSlash: true, // برای سازگاری بیشتر با GitHub Pages
 };
 
 export default nextConfig;
