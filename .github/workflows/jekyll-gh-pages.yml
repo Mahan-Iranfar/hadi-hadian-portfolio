@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # استفاده از Node.js 20 به جای 18
           cache: 'npm'
 
       - name: Install dependencies
